@@ -7,3 +7,7 @@ from django.shortcuts import render
 def index(request):
     # 注意传入参数和render的参数
     return render(request, 'index.html', locals())
+
+
+def index2(request):
+    return render(request, 'index_2.html', locals())

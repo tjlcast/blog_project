@@ -18,10 +18,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog.views import index
+from blog.views import index2
 # 注意文件的目录结构
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
+    url(r'index2', index2, name='index2')
     # 注意参数以及别名
 ]
