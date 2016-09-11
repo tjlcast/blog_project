@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 """blog_project URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -15,7 +17,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from blog.views import index
+# 注意文件的目录结构
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', index, name='index'),
+    # 注意参数以及别名
 ]
