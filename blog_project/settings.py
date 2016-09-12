@@ -61,11 +61,12 @@ TEMPLATES = [
         ,
         'APP_DIRS': True,
         'OPTIONS': {
-            'context_processors': [
+            'context_processors': [ # 上下文处理器
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'blog.views.global_setting',
             ],
         },
     },
@@ -81,7 +82,17 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'USER': 'root',
+        'PASSWORD': 'destination',
     }
+    # 'default' : {
+    #     'ENGINE' : 'django.db.backends.mysql',
+    #     'NAME' : 'blogdb', # 数据库名称
+    #     'USER' : '',
+    #     'PASSWORD' : '',
+    #     'HOST' : '',
+    #     'PORT' : '',
+    # }
 }
 
 
@@ -123,6 +134,99 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#自定义用户model
+AUTH_USER_MODEL = 'blog.User'
+
+#添加静态文件目录到工程中
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),# 添加静态文件目录到工程中
+    os.path.join(BASE_DIR, 'static'),
 )
+
+#网站的基本信息配置(全局设置)
+SITE_NAME = '唐嘉良的个人博客'
+SITE_DESC = 'python学习博客'
+WEBO_SINA = ''
+WEBO_TENCENT = ''
+PRO_RSS = ''
+PRO_EMAIL = 'phx108@sina.com'
+
+
+
+#自定义日志输出信息
+LOGGING = {
+    'version' : 1,
+    'disable_existing_loggers' : True,
+    'formatters' : {
+            'standard' : {
+            'format' : '%(asctime)s [%(threadName)s:%(thread)d] [%(name)s:%(lineno)d] [%(module)s:%(funcName)s] [%(levelname)s] - %(message)s',
+        }
+    } ,
+    'filters' : {
+    } ,
+    'handlers' : {
+        'mail_admins' : {
+            'level' : 'ERROR',
+            'class' : 'django.utils.log.AdminEmailHandler',
+            'include_html' : True,
+        },
+        'default' : {
+            'level' : 'DEBUG',
+            'class' : 'logging.handlers.RotatingFileHandler',
+            'filename' : 'log/all.log', #  	日志输出文件
+            'maxBytes': 1024*1024*5, 	#	文件大小
+            'backupCount' : 5,
+            'formatter' : 'standard' ,
+        },
+        'error' : {
+            'level' : 'ERROR',
+            'class' : 'logging.handlers.RotatingFileHandler',
+            'filename' : 'log/error.log' ,
+            'maxBytes' : 1024*1024**5,
+            'backupCount' : 5,
+            'formatter' : 'standard',
+        },
+        'console' : {
+            'level' : 'DEBUG',
+            'class' : 'logging.StreamHandler',
+            'formatter' : 'standard',
+        } ,
+        'request_handler' : {
+            'level' : 'DEBUG',
+            'class' : 'logging.handlers.RotatingFileHandler',
+            'filename' : 'log/script.log',
+            'maxBytes' : '1024*1024*5',
+            'backupCount' : 5,
+            'formatter' : 'standard',
+        },
+        'scripts_handler' : {
+            'level' : 'DEBUG' ,
+            'class' : 'logging.handlers.RotatingFileHandler',
+            'filename' : 'log/script.log' ,
+            'maxBytes' : 1024*1024*5 ,
+            'backupCount' : 5,
+            'formatter' : 'standard' ,
+        }
+    } ,
+    'loggers' : {
+        'django' : {
+            'handlers' : ['default', 'console'],
+            'propagate' : False,
+        } ,
+        'django.requst' : {
+            'handlers' : ['request_handler'],
+            'level' : 'DEBUG',
+            'propagate' : False ,
+        },
+        'scripts' : {
+            'handlers' : ['scripts_handler'] ,
+            'level' : 'INFO' ,
+            'propagate' : False
+        },
+        'blog.views' : {
+            'handlers' : ['default', 'error'],
+            'level' : 'DEBUG' ,
+            'propagate' : True,
+        },
+    }
+
+}

@@ -1,0 +1,386 @@
+2016-09-11 11:51:55,502 [Thread-1:123145310715904] [blog.views:15] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-11 11:51:55,507 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-11 12:02:48,581 [Thread-1:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /index2
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 31, in index2
+    return render(request, 'new_index.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 577: invalid start byte
+2016-09-11 12:02:48,692 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "GET /index2 HTTP/1.1" 500 132248
+2016-09-11 12:05:57,799 [Thread-1:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /index2
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 31, in index2
+    return render(request, 'new_index.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 68, in render_to_string
+    return template.render(context, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    with context.bind_template(self):
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/contextlib.py", line 17, in __enter__
+    return self.gen.next()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/context.py", line 236, in bind_template
+    updates.update(processor(self.request))
+TypeError: global_setting() takes no arguments (1 given)
+2016-09-11 12:05:57,872 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "GET /index2 HTTP/1.1" 500 90613
+2016-09-11 12:06:23,591 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 14231
+2016-09-11 12:06:23,606 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-11 12:06:23,607 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-11 12:06:23,607 [Thread-6:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-11 12:06:23,607 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-11 12:06:23,616 [Thread-7:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-11 12:06:23,623 [Thread-9:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-11 12:06:23,629 [Thread-8:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-11 12:06:23,630 [Thread-9:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2173
+2016-09-11 12:06:23,637 [Thread-10:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/logo.png
+2016-09-11 12:06:23,638 [Thread-10:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/logo.png HTTP/1.1" 404 2191
+2016-09-11 12:06:23,645 [Thread-11:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-11 12:06:23,649 [Thread-12:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-11 12:06:23,650 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,654 [Thread-13:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-11 12:06:23,661 [Thread-14:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-11 12:06:23,661 [Thread-12:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,664 [Thread-13:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,667 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,677 [Thread-15:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-11 12:06:23,679 [Thread-16:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-11 12:06:23,680 [Thread-15:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,693 [Thread-18:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-11 12:06:23,695 [Thread-17:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-11 12:06:23,695 [Thread-16:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,701 [Thread-19:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/05.jpg
+2016-09-11 12:06:23,702 [Thread-18:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,702 [Thread-17:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,707 [Thread-20:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-11 12:06:23,711 [Thread-21:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-11 12:06:23,713 [Thread-19:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/05.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,715 [Thread-20:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2185
+2016-09-11 12:06:23,715 [Thread-21:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2206
+2016-09-11 12:06:23,720 [Thread-22:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/slide-bg.png HTTP/1.1" 304 0
+2016-09-11 12:06:23,723 [Thread-23:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/newsbg01.png HTTP/1.1" 304 0
+2016-09-11 12:06:23,726 [Thread-24:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/newsbg02.png HTTP/1.1" 304 0
+2016-09-11 12:06:23,728 [Thread-25:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/newsbg04.png HTTP/1.1" 304 0
+2016-09-11 12:06:23,731 [Thread-26:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/newsbg03.png HTTP/1.1" 304 0
+2016-09-11 12:06:23,732 [Thread-27:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ico_05_1.jpg HTTP/1.1" 304 0
+2016-09-11 12:06:23,735 [Thread-28:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ico_06_1.jpg HTTP/1.1" 304 0
+2016-09-11 12:06:23,737 [Thread-29:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ico_04_1.jpg HTTP/1.1" 304 0
+2016-09-11 12:06:23,738 [Thread-30:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ico_07_1.jpg HTTP/1.1" 304 0
+2016-09-11 12:06:23,795 [Thread-31:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/icons.png HTTP/1.1" 304 0
+2016-09-11 12:06:23,798 [Thread-32:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/lanmbq.png HTTP/1.1" 304 0
+2016-09-11 12:06:23,811 [Thread-33:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/datepng.png HTTP/1.1" 304 0
+2016-09-11 12:06:23,811 [Thread-34:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ph2.png HTTP/1.1" 304 0
+2016-09-11 12:06:23,891 [Thread-35:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/silde-nav.png HTTP/1.1" 304 0
+2016-09-11 12:06:36,220 [Thread-36:123145310715904] [blog.views:22] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-11 12:06:36,222 [Thread-36:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-11 12:06:40,219 [Thread-37:123145310715904] [blog.views:22] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-11 12:06:40,220 [Thread-37:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-11 12:09:09,761 [Thread-43:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /index2
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 31, in index2
+    return render(request, 'new_index.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 577: invalid start byte
+2016-09-11 12:09:09,858 [Thread-43:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "GET /index2 HTTP/1.1" 500 132313
+2016-09-11 12:09:37,470 [Thread-1:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /index2
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 31, in index2
+    return render(request, 'new_index.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 577: invalid start byte
+2016-09-11 12:09:37,568 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "GET /index2 HTTP/1.1" 500 132313
+2016-09-11 12:10:17,743 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 14294
+2016-09-11 12:10:17,758 [Thread-9:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-11 12:10:17,759 [Thread-10:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-11 12:10:17,760 [Thread-12:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-11 12:10:17,760 [Thread-11:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-11 12:10:17,771 [Thread-15:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-11 12:10:17,782 [Thread-16:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-11 12:10:17,784 [Thread-13:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-11 12:10:17,785 [Thread-14:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-11 12:10:17,785 [Thread-15:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2173
+2016-09-11 12:10:17,785 [Thread-16:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2185
+2016-09-11 12:10:17,793 [Thread-17:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-11 12:10:17,797 [Thread-19:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-11 12:10:17,807 [Thread-18:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-11 12:10:17,809 [Thread-20:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-11 12:10:17,810 [Thread-17:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2185
+2016-09-11 12:10:17,811 [Thread-19:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2185
+2016-09-11 12:10:17,811 [Thread-18:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2185
+2016-09-11 12:10:17,812 [Thread-20:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2185
+2016-09-11 12:10:17,817 [Thread-21:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-11 12:10:17,835 [Thread-21:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2185
+2016-09-11 12:10:17,829 [Thread-23:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-11 12:10:17,834 [Thread-24:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/05.jpg
+2016-09-11 12:10:17,823 [Thread-22:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-11 12:10:17,837 [Thread-24:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/05.jpg HTTP/1.1" 404 2185
+2016-09-11 12:10:17,837 [Thread-22:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2185
+2016-09-11 12:10:17,837 [Thread-23:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2185
+2016-09-11 12:10:17,843 [Thread-25:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-11 12:10:17,848 [Thread-26:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-11 12:10:17,850 [Thread-25:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2206
+2016-09-11 12:10:17,850 [Thread-26:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2185
+2016-09-11 12:13:08,388 [Thread-27:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /index2
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 31, in index2
+    return render(request, 'new_index.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 577: invalid start byte
+2016-09-11 12:13:08,484 [Thread-27:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "GET /index2 HTTP/1.1" 500 132313
+2016-09-11 12:14:55,534 [Thread-33:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 14290
+2016-09-11 12:14:55,549 [Thread-34:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-11 12:14:55,554 [Thread-35:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-11 12:14:55,555 [Thread-38:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-11 12:14:55,559 [Thread-36:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-11 12:14:55,561 [Thread-37:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-11 12:14:55,563 [Thread-39:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-11 12:14:55,574 [Thread-41:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-11 12:14:55,575 [Thread-41:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,576 [Thread-40:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-11 12:14:55,575 [Thread-39:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2173
+2016-09-11 12:14:55,586 [Thread-42:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-11 12:14:55,593 [Thread-43:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-11 12:14:55,593 [Thread-42:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,600 [Thread-44:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-11 12:14:55,604 [Thread-44:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,600 [Thread-43:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,608 [Thread-45:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-11 12:14:55,615 [Thread-46:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-11 12:14:55,615 [Thread-45:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,620 [Thread-47:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-11 12:14:55,628 [Thread-47:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,628 [Thread-46:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,634 [Thread-49:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-11 12:14:55,635 [Thread-49:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2206
+2016-09-11 12:14:55,634 [Thread-48:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-11 12:14:55,636 [Thread-48:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,643 [Thread-50:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-11 12:14:55,644 [Thread-50:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,651 [Thread-51:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/05.jpg
+2016-09-11 12:14:55,657 [Thread-52:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-11 12:14:55,658 [Thread-52:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2185
+2016-09-11 12:14:55,660 [Thread-51:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/05.jpg HTTP/1.1" 404 2185
+2016-09-11 12:22:58,732 [Thread-53:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /index2
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 31, in index2
+    return render(request, 'new_index.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 581: invalid start byte
+2016-09-11 12:22:58,833 [Thread-53:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "GET /index2 HTTP/1.1" 500 132313
+2016-09-11 13:01:23,998 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 14342
+2016-09-11 13:01:24,020 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-11 13:01:24,020 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-11 13:01:24,021 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-11 13:01:24,029 [Thread-7:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-11 13:01:24,029 [Thread-6:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-11 13:01:24,038 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-11 13:01:24,042 [Thread-9:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-11 13:01:24,043 [Thread-9:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2173
+2016-09-11 13:01:24,050 [Thread-10:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/logo.png
+2016-09-11 13:01:24,055 [Thread-10:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/logo.png HTTP/1.1" 404 2191
+2016-09-11 13:01:24,062 [Thread-11:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-11 13:01:24,064 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2185
+2016-09-11 13:01:24,069 [Thread-13:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-11 13:01:24,069 [Thread-12:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-11 13:01:24,074 [Thread-14:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-11 13:01:24,080 [Thread-15:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-11 13:01:24,080 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2185
+2016-09-11 13:01:24,085 [Thread-16:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-11 13:01:24,091 [Thread-17:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-11 13:01:24,091 [Thread-12:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2185
+2016-09-11 13:01:24,092 [Thread-14:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2185
+2016-09-11 13:01:24,093 [Thread-17:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2185
+2016-09-11 13:01:24,093 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2185
+2016-09-11 13:01:24,094 [Thread-16:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2185
+2016-09-11 13:01:24,102 [Thread-18:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-11 13:01:24,103 [Thread-18:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2206
+2016-09-11 13:01:24,110 [Thread-19:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-11 13:01:24,117 [Thread-20:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/05.jpg
+2016-09-11 13:01:24,121 [Thread-21:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-11 13:01:24,121 [Thread-19:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2185
+2016-09-11 13:01:24,122 [Thread-20:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/05.jpg HTTP/1.1" 404 2185
+2016-09-11 13:01:24,123 [Thread-21:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2185
+2016-09-11 14:10:55,559 [Thread-1:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /index2
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 31, in index2
+    return render(request, 'new_index.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 38, in get_template
+    contents = self.get_contents(origin)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/filesystem.py", line 25, in get_contents
+    return fp.read()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/codecs.py", line 302, in decode
+    (result, consumed) = self._buffer_decode(data, self.errors, final)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 577: invalid start byte
+2016-09-11 14:10:55,662 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "GET /index2 HTTP/1.1" 500 132656
+2016-09-11 14:11:28,738 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 14350
+2016-09-11 14:11:28,761 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-11 14:11:28,762 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-11 14:11:28,763 [Thread-6:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-11 14:11:28,771 [Thread-9:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-11 14:11:28,773 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-11 14:11:28,778 [Thread-7:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-11 14:11:28,781 [Thread-9:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2173
+2016-09-11 14:11:28,782 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-11 14:11:28,791 [Thread-11:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-11 14:11:28,795 [Thread-12:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-11 14:11:28,800 [Thread-13:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-11 14:11:28,801 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,802 [Thread-12:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,809 [Thread-13:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,810 [Thread-14:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-11 14:11:28,820 [Thread-15:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-11 14:11:28,824 [Thread-16:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-11 14:11:28,828 [Thread-17:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-11 14:11:28,828 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,833 [Thread-18:123145319129088] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-11 14:11:28,833 [Thread-15:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,835 [Thread-17:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,835 [Thread-16:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,837 [Thread-18:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2206
+2016-09-11 14:11:28,844 [Thread-19:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-11 14:11:28,850 [Thread-20:123145310715904] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/05.jpg
+2016-09-11 14:11:28,855 [Thread-21:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-11 14:11:28,856 [Thread-19:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,856 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/05.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,857 [Thread-21:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2185
+2016-09-11 14:11:28,864 [Thread-10:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 200 7804
