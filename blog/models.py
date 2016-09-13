@@ -19,7 +19,7 @@ class Tag(models.Model):
         return self.name
 
 
-#分类
+# 分类
 class Catagory(models.Model):
     name = models.CharField(max_length=30, verbose_name='分类名称')
     index = models.IntegerField(default=9999, verbose_name='分类的排序')
@@ -35,7 +35,7 @@ class Catagory(models.Model):
 # 用户模型
 class User(AbstractUser):
 
-    avatar = models.ImageField(upload_to='avatar/%Y/%m', default='avatar/default.png', max_length=200, verbose_name='用户头像')
+    avatar = models.ImageField(upload_to='avatar/%Y/%m', default='avatar/default.png', max_length=200, blank=True, null=True, verbose_name='用户头像')
     qq = models.CharField(max_length=20, blank=True, verbose_name='用户QQ')
     mobile = models.CharField(max_length=11, blank=True, null=True, unique=True, verbose_name='手机号码')
 
@@ -57,11 +57,11 @@ class Article(models.Model):
     is_recommend = models.BooleanField(default=False, verbose_name='是否推荐')
     date_publish = models.DateTimeField(auto_now_add=True, verbose_name='发布时间')
     user = models.ForeignKey(User, verbose_name='用户')
-    catagory = models.ForeignKey(Catagory, verbose_name='分类')
+    category = models.ForeignKey(Catagory, verbose_name='分类')
     tag = models.ManyToManyField(Tag, verbose_name='标签')
 
     class Meta:
-        verbose_name = ''
+        verbose_name = '文章'
         verbose_name_plural = verbose_name
         ordering = ['-date_publish']
 
