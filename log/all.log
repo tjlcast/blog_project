@@ -384,3 +384,777 @@ UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 577: invalid
 2016-09-11 14:11:28,856 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/05.jpg HTTP/1.1" 404 2185
 2016-09-11 14:11:28,857 [Thread-21:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2185
 2016-09-11 14:11:28,864 [Thread-10:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 200 7804
+2016-09-12 13:48:14,751 [Thread-1:123145310715904] [blog.views:22] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-12 13:48:14,759 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-12 13:48:14,811 [Thread-3:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /favicon.ico
+2016-09-12 13:48:14,812 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 2179
+2016-09-12 13:48:21,526 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin HTTP/1.1" 301 0
+2016-09-12 13:48:21,537 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 302 0
+2016-09-12 13:48:21,563 [Thread-6:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1653
+2016-09-12 13:48:21,595 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+2016-09-12 13:48:21,596 [Thread-7:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 200 15937
+2016-09-12 13:48:21,600 [Thread-9:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+2016-09-12 13:48:21,607 [Thread-10:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+2016-09-12 13:48:21,612 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+2016-09-12 13:50:58,852 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1653
+2016-09-12 13:50:58,861 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-12 13:50:58,861 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2016-09-12 13:50:58,864 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-12 13:50:58,870 [Thread-6:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-12 13:50:58,871 [Thread-7:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-12 13:51:03,305 [Thread-8:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 377, in login
+    return login(request, **defaults)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/auth/views.py", line 82, in login
+    auth_login(request, form.get_user())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 109, in login
+    request.session.cycle_key()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 311, in cycle_key
+    self.create()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 50, in create
+    self._session_key = self._get_new_session_key()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 164, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 46, in exists
+    return self.model.objects.filter(session_key=session_key).exists()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/query.py", line 660, in exists
+    return self.query.has_results(using=self.db)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/sql/query.py", line 494, in has_results
+    return compiler.has_results()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 806, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_session
+2016-09-12 13:51:03,441 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "POST /admin/login/?next=/admin/ HTTP/1.1" 500 157384
+2016-09-12 13:59:08,356 [Thread-9:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1653
+2016-09-12 13:59:16,991 [Thread-10:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/login/?next=/admin/ HTTP/1.1" 200 1814
+2016-09-12 13:59:17,018 [Thread-11:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+2016-09-12 14:02:16,734 [Thread-1:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 377, in login
+    return login(request, **defaults)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/auth/views.py", line 82, in login
+    auth_login(request, form.get_user())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 109, in login
+    request.session.cycle_key()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 311, in cycle_key
+    self.create()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 50, in create
+    self._session_key = self._get_new_session_key()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 164, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 46, in exists
+    return self.model.objects.filter(session_key=session_key).exists()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/query.py", line 660, in exists
+    return self.query.has_results(using=self.db)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/sql/query.py", line 494, in has_results
+    return compiler.has_results()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 806, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_session
+2016-09-12 14:02:16,845 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "POST /admin/login/?next=/admin/ HTTP/1.1" 500 157386
+2016-09-12 14:02:25,510 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 302 0
+2016-09-12 14:02:25,527 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1653
+2016-09-12 14:02:31,644 [Thread-7:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 377, in login
+    return login(request, **defaults)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/auth/views.py", line 47, in inner
+    return func(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/debug.py", line 76, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/auth/views.py", line 82, in login
+    auth_login(request, form.get_user())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/auth/__init__.py", line 109, in login
+    request.session.cycle_key()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 311, in cycle_key
+    self.create()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 50, in create
+    self._session_key = self._get_new_session_key()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/base.py", line 164, in _get_new_session_key
+    if not self.exists(session_key):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/sessions/backends/db.py", line 46, in exists
+    return self.model.objects.filter(session_key=session_key).exists()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/query.py", line 660, in exists
+    return self.query.has_results(using=self.db)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/sql/query.py", line 494, in has_results
+    return compiler.has_results()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 806, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/db/backends/sqlite3/base.py", line 337, in execute
+    return Database.Cursor.execute(self, query, params)
+OperationalError: no such table: django_session
+2016-09-12 14:02:31,761 [Thread-7:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "POST /admin/login/?next=/admin/ HTTP/1.1" 500 157385
+2016-09-12 14:05:25,491 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1653
+2016-09-12 14:05:30,557 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+2016-09-12 14:05:30,577 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 2397
+2016-09-12 14:05:30,593 [Thread-5:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
+2016-09-12 14:05:30,599 [Thread-6:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+2016-09-12 14:05:30,600 [Thread-7:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+2016-09-12 14:05:35,327 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/auth/group/ HTTP/1.1" 200 3379
+2016-09-12 14:05:35,346 [Thread-11:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 200 7976
+2016-09-12 14:05:35,350 [Thread-9:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/changelists.css HTTP/1.1" 200 6117
+2016-09-12 14:05:35,351 [Thread-13:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+2016-09-12 14:05:35,353 [Thread-14:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6577
+2016-09-12 14:05:35,358 [Thread-10:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-12 14:05:35,360 [Thread-12:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+2016-09-12 14:05:35,362 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 200 6501
+2016-09-12 14:05:35,363 [Thread-16:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 200 8186
+2016-09-12 14:05:35,367 [Thread-17:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+2016-09-12 14:05:35,371 [Thread-18:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+2016-09-12 14:05:35,374 [Thread-19:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+2016-09-12 14:05:35,437 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+2016-09-13 12:51:39,795 [Thread-1:123145310715904] [blog.views:22] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-13 12:51:39,806 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-13 12:51:39,851 [Thread-3:123145314922496] [django.request:152] [base:get_response] [WARNING] - Not Found: /favicon.ico
+2016-09-13 12:51:39,851 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 2179
+2016-09-13 12:51:46,874 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5346
+2016-09-13 12:51:46,885 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2016-09-13 12:51:46,886 [Thread-6:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 12:51:46,890 [Thread-7:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 12:51:46,899 [Thread-9:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:51:46,900 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:51:46,900 [Thread-10:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:51:46,903 [Thread-11:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-13 12:51:46,904 [Thread-12:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-13 12:51:49,784 [Thread-13:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/catagory/ HTTP/1.1" 200 3034
+2016-09-13 12:51:49,799 [Thread-14:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2016-09-13 12:51:49,802 [Thread-16:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 12:51:49,806 [Thread-17:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 12:51:49,807 [Thread-18:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 12:51:49,811 [Thread-19:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 12:51:49,817 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 12:51:49,818 [Thread-22:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 12:51:49,819 [Thread-15:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:51:49,821 [Thread-21:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 12:51:49,820 [Thread-23:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 12:51:49,896 [Thread-24:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2016-09-13 12:52:28,016 [Thread-25:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5346
+2016-09-13 12:52:32,607 [Thread-26:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4372
+2016-09-13 12:52:32,619 [Thread-27:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:52:36,235 [Thread-28:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15139
+2016-09-13 12:52:36,258 [Thread-30:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:52:36,290 [Thread-29:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/forms.css HTTP/1.1" 200 7750
+2016-09-13 12:52:36,291 [Thread-32:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20529
+2016-09-13 12:52:36,292 [Thread-31:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/calendar.js HTTP/1.1" 200 7790
+2016-09-13 12:52:36,298 [Thread-34:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/change_form.js HTTP/1.1" 200 698
+2016-09-13 12:52:36,299 [Thread-33:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+2016-09-13 12:52:36,302 [Thread-35:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+2016-09-13 12:52:36,372 [Thread-36:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+2016-09-13 12:52:36,373 [Thread-37:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+2016-09-13 12:52:39,307 [Thread-38:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4372
+2016-09-13 12:52:50,583 [Thread-44:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5346
+2016-09-13 12:53:18,078 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5352
+2016-09-13 12:53:18,089 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2016-09-13 12:53:18,090 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 12:53:18,093 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 12:53:18,099 [Thread-6:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:53:18,101 [Thread-7:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:53:18,104 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:53:18,108 [Thread-9:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-13 12:53:18,109 [Thread-10:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-13 12:53:21,250 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 3032
+2016-09-13 12:53:21,263 [Thread-12:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:53:27,644 [Thread-13:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5352
+2016-09-13 12:53:28,845 [Thread-14:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/catagory/ HTTP/1.1" 200 3034
+2016-09-13 12:53:28,859 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:53:30,543 [Thread-16:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5352
+2016-09-13 12:53:32,185 [Thread-17:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 3032
+2016-09-13 12:53:32,198 [Thread-18:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:53:34,105 [Thread-19:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5352
+2016-09-13 12:53:35,074 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4372
+2016-09-13 12:53:35,087 [Thread-21:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:53:43,652 [Thread-22:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/ HTTP/1.1" 200 3118
+2016-09-13 12:53:43,669 [Thread-23:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/cancel.js HTTP/1.1" 200 204
+2016-09-13 12:53:45,210 [Thread-24:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/ HTTP/1.1" 302 0
+2016-09-13 12:53:45,242 [Thread-25:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4279
+2016-09-13 12:53:45,255 [Thread-26:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:53:45,274 [Thread-27:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2016-09-13 12:53:58,356 [Thread-28:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 12:55:09,771 [Thread-29:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/catagory/add/ HTTP/1.1" 200 4310
+2016-09-13 12:55:09,785 [Thread-30:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:55:21,725 [Thread-31:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/catagory/add/ HTTP/1.1" 302 0
+2016-09-13 12:55:21,756 [Thread-32:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/catagory/ HTTP/1.1" 200 4362
+2016-09-13 12:55:21,771 [Thread-33:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:55:26,126 [Thread-34:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 12:55:27,306 [Thread-35:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/catagory/ HTTP/1.1" 200 4176
+2016-09-13 12:55:27,323 [Thread-36:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:56:53,817 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/catagory/ HTTP/1.1" 200 4176
+2016-09-13 12:56:53,840 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 12:56:53,842 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2016-09-13 12:56:53,845 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 12:56:53,846 [Thread-6:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 12:56:53,846 [Thread-7:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 12:56:53,852 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:56:53,853 [Thread-9:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 12:56:53,856 [Thread-10:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 12:56:53,857 [Thread-12:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 12:56:53,858 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 12:56:53,861 [Thread-13:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 12:56:53,861 [Thread-14:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 12:56:53,906 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:56:53,907 [Thread-16:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:56:53,908 [Thread-17:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:56:53,908 [Thread-18:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2016-09-13 12:56:54,721 [Thread-19:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 12:56:55,851 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 3032
+2016-09-13 12:56:55,865 [Thread-21:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:57:05,569 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 3032
+2016-09-13 12:57:05,595 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 12:57:05,599 [Thread-7:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 12:57:05,599 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:57:05,602 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2016-09-13 12:57:05,602 [Thread-6:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 12:57:05,604 [Thread-8:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 12:57:05,604 [Thread-9:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 12:57:05,605 [Thread-10:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 12:57:05,609 [Thread-11:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 12:57:05,611 [Thread-12:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 12:57:05,613 [Thread-13:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 12:57:05,614 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 12:57:05,652 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:57:05,653 [Thread-17:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:57:05,653 [Thread-16:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:57:05,655 [Thread-18:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2016-09-13 12:57:14,447 [Thread-19:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 12:57:52,533 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 12:57:52,544 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 12:57:52,544 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2016-09-13 12:57:52,547 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 12:57:52,557 [Thread-7:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:57:52,558 [Thread-8:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:57:52,559 [Thread-6:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 12:57:52,562 [Thread-9:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-13 12:57:52,563 [Thread-10:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-13 12:57:54,369 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 3032
+2016-09-13 12:57:54,384 [Thread-12:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 12:57:56,942 [Thread-13:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 12:57:59,310 [Thread-14:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 4808
+2016-09-13 12:57:59,323 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:01:41,317 [Thread-1:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /admin/blog/article/add/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 544, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1509, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 185, in inner
+    return func(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 646, in get_form
+    % (e, self.__class__.__name__)
+FieldError: Unknown field(s) (url, enable_comments, registration_required, sites, template_name) specified for Article. Check fields/fieldsets/exclude attributes of class ArticleAdmin.
+2016-09-13 13:01:41,419 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "GET /admin/blog/article/add/ HTTP/1.1" 500 116601
+2016-09-13 13:02:32,724 [Thread-1:123145310715904] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /admin/blog/article/add/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 544, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1509, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 185, in inner
+    return func(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 646, in get_form
+    % (e, self.__class__.__name__)
+FieldError: Unknown field(s) (enable_comments, registration_required, template_name) specified for Article. Check fields/fieldsets/exclude attributes of class ArticleAdmin.
+2016-09-13 13:02:32,821 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [ERROR] - "GET /admin/blog/article/add/ HTTP/1.1" 500 116447
+2016-09-13 13:03:57,733 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 5909
+2016-09-13 13:03:57,755 [Thread-4:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2016-09-13 13:03:57,755 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 13:03:57,756 [Thread-6:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,763 [Thread-7:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,767 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,768 [Thread-10:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,769 [Thread-11:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,775 [Thread-5:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:03:57,779 [Thread-13:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2016-09-13 13:03:57,782 [Thread-12:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 13:03:57,785 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,785 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,790 [Thread-16:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,790 [Thread-17:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,792 [Thread-18:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2016-09-13 13:03:57,799 [Thread-9:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/collapse.js HTTP/1.1" 200 1151
+2016-09-13 13:03:57,831 [Thread-19:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:03:57,832 [Thread-20:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:03:57,832 [Thread-21:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:06:05,744 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 13:06:08,902 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9136
+2016-09-13 13:06:08,916 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:24:38,714 [Thread-1:123145310715904] [blog.views:22] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-13 13:24:38,718 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-13 13:24:47,129 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5917
+2016-09-13 13:24:47,131 [Thread-3:123145310715904] [django.server:85] [basehttp:handle_error] [INFO] - - Broken pipe from ('127.0.0.1', 52956)
+
+2016-09-13 13:24:47,148 [Thread-4:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5917
+2016-09-13 13:24:47,173 [Thread-5:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+2016-09-13 13:24:50,694 [Thread-6:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 3302
+2016-09-13 13:24:50,712 [Thread-7:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:24:50,722 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:24:50,728 [Thread-9:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:24:50,736 [Thread-10:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:24:52,626 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5917
+2016-09-13 13:24:54,359 [Thread-12:123145314922496] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /admin/blog/article/add/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 544, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1509, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/utils/decorators.py", line 185, in inner
+    return func(*args, **kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 1438, in changeform_view
+    ModelForm = self.get_form(request, obj)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/contrib/admin/options.py", line 646, in get_form
+    % (e, self.__class__.__name__)
+FieldError: Unknown field(s) (category) specified for Article. Check fields/fieldsets/exclude attributes of class ArticleAdmin.
+2016-09-13 13:24:54,448 [Thread-12:123145314922496] [django.server:131] [basehttp:log_message] [ERROR] - "GET /admin/blog/article/add/ HTTP/1.1" 500 115956
+2016-09-13 13:28:04,007 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 302 0
+2016-09-13 13:28:04,038 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/login/?next=/admin/blog/article/add/ HTTP/1.1" 200 1687
+2016-09-13 13:28:04,051 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 13:28:04,051 [Thread-5:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2016-09-13 13:28:04,055 [Thread-6:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 13:28:04,061 [Thread-7:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:28:04,062 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:28:14,941 [Thread-9:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/login/?next=/admin/blog/article/add/ HTTP/1.1" 200 1848
+2016-09-13 13:28:14,953 [Thread-10:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:28:48,560 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/login/?next=/admin/blog/article/add/ HTTP/1.1" 200 1848
+2016-09-13 13:28:58,574 [Thread-12:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/login/?next=/admin/blog/article/add/ HTTP/1.1" 302 0
+2016-09-13 13:28:58,618 [Thread-13:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:28:58,646 [Thread-15:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:28:58,646 [Thread-16:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:28:58,653 [Thread-17:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:28:58,653 [Thread-14:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:28:58,692 [Thread-18:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:28:58,697 [Thread-19:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:28:58,702 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:29:03,764 [Thread-21:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 3302
+2016-09-13 13:29:03,792 [Thread-24:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:29:03,792 [Thread-23:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:29:03,792 [Thread-25:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:29:03,797 [Thread-22:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:29:03,817 [Thread-26:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:29:03,822 [Thread-27:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:29:03,826 [Thread-28:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:29:05,717 [Thread-29:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 5352
+2016-09-13 13:29:07,497 [Thread-30:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4157
+2016-09-13 13:29:07,514 [Thread-31:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:29:10,488 [Thread-32:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 13:29:12,322 [Thread-33:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 3302
+2016-09-13 13:29:12,347 [Thread-36:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:29:12,348 [Thread-34:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:29:12,354 [Thread-35:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:29:12,356 [Thread-37:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:29:12,374 [Thread-38:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:29:12,380 [Thread-39:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:29:12,384 [Thread-40:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:29:14,117 [Thread-41:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 13:29:17,028 [Thread-42:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:29:17,054 [Thread-46:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:29:17,054 [Thread-45:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:29:17,059 [Thread-44:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:29:17,062 [Thread-43:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:29:17,082 [Thread-47:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:29:17,087 [Thread-48:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:29:17,092 [Thread-49:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:29:35,426 [Thread-50:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:30:04,484 [Thread-56:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:30:04,501 [Thread-57:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 13:30:04,502 [Thread-58:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2016-09-13 13:30:04,508 [Thread-60:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,512 [Thread-62:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,513 [Thread-63:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,515 [Thread-61:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,517 [Thread-64:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,519 [Thread-59:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:30:04,523 [Thread-66:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2016-09-13 13:30:04,523 [Thread-65:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 13:30:04,525 [Thread-67:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,529 [Thread-68:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,531 [Thread-69:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,538 [Thread-70:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:30:04,547 [Thread-71:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:30:04,548 [Thread-72:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:30:04,549 [Thread-73:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,554 [Thread-74:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,557 [Thread-76:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-13 13:30:04,558 [Thread-75:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2016-09-13 13:30:04,561 [Thread-77:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-13 13:30:04,562 [Thread-78:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:30:04,567 [Thread-80:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:30:04,568 [Thread-79:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:31:20,596 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:31:20,622 [Thread-3:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 13:31:20,628 [Thread-4:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2016-09-13 13:31:20,629 [Thread-6:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,630 [Thread-9:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,630 [Thread-8:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,632 [Thread-7:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,635 [Thread-10:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 13:31:20,639 [Thread-11:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,640 [Thread-5:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:31:20,643 [Thread-12:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,644 [Thread-13:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2016-09-13 13:31:20,646 [Thread-14:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,653 [Thread-16:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:31:20,653 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,659 [Thread-17:123145319129088] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:31:20,664 [Thread-18:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:31:20,665 [Thread-19:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,668 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,674 [Thread-21:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:31:20,675 [Thread-22:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2016-09-13 13:31:20,680 [Thread-23:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:31:20,681 [Thread-24:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-13 13:31:20,687 [Thread-25:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:31:20,689 [Thread-26:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-13 13:31:20,695 [Thread-27:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:31:20,695 [Thread-28:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:31:20,696 [Thread-29:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:31:24,218 [Thread-30:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:31:24,237 [Thread-31:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 13:31:24,238 [Thread-32:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2016-09-13 13:31:24,242 [Thread-34:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,249 [Thread-36:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:31:24,249 [Thread-35:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,250 [Thread-37:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,259 [Thread-38:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 13:31:24,261 [Thread-33:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:31:24,261 [Thread-39:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2016-09-13 13:31:24,269 [Thread-40:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:31:24,271 [Thread-41:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,274 [Thread-42:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,276 [Thread-43:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,279 [Thread-44:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,283 [Thread-45:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,284 [Thread-46:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:31:24,286 [Thread-47:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,288 [Thread-48:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,290 [Thread-49:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2016-09-13 13:31:24,293 [Thread-50:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-13 13:31:24,296 [Thread-51:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-13 13:31:24,303 [Thread-52:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:31:24,308 [Thread-53:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:31:24,314 [Thread-54:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:31:24,321 [Thread-55:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:31:24,323 [Thread-56:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:31:24,323 [Thread-57:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:32:01,984 [Thread-58:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:32:06,728 [Thread-59:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-4.1.10/config.js HTTP/1.1" 404 1703
+2016-09-13 13:32:57,110 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:32:59,873 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:32:59,903 [Thread-8:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,907 [Thread-9:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,909 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 13:32:59,911 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,911 [Thread-5:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2016-09-13 13:32:59,918 [Thread-10:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:32:59,919 [Thread-11:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2016-09-13 13:32:59,924 [Thread-12:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,928 [Thread-6:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:32:59,930 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,933 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 13:32:59,934 [Thread-14:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,942 [Thread-16:123145314922496] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:32:59,946 [Thread-18:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,955 [Thread-17:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/config.js HTTP/1.1" 200 169
+2016-09-13 13:32:59,958 [Thread-19:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,963 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,966 [Thread-21:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,970 [Thread-22:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2016-09-13 13:32:59,974 [Thread-23:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-13 13:32:59,977 [Thread-24:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-13 13:33:00,019 [Thread-25:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:33:00,028 [Thread-26:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:33:00,062 [Thread-27:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:33:00,064 [Thread-28:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:33:00,066 [Thread-29:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:33:12,499 [Thread-30:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:33:14,854 [Thread-31:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/config.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,257 [Thread-32:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:33:34,276 [Thread-36:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,276 [Thread-34:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2016-09-13 13:33:34,279 [Thread-33:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 13:33:34,282 [Thread-37:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,282 [Thread-38:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,285 [Thread-39:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,288 [Thread-40:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,289 [Thread-41:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,292 [Thread-42:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 13:33:34,294 [Thread-43:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2016-09-13 13:33:34,299 [Thread-44:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,302 [Thread-46:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:33:34,304 [Thread-45:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,304 [Thread-35:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:33:34,308 [Thread-47:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:33:34,309 [Thread-49:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,311 [Thread-48:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/config.js HTTP/1.1" 200 167
+2016-09-13 13:33:34,313 [Thread-50:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,316 [Thread-51:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2016-09-13 13:33:34,318 [Thread-52:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-13 13:33:34,321 [Thread-53:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-13 13:33:34,350 [Thread-54:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:33:34,355 [Thread-55:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:33:34,364 [Thread-57:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:33:34,364 [Thread-56:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:33:34,365 [Thread-58:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:33:39,358 [Thread-59:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9537
+2016-09-13 13:33:40,333 [Thread-60:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/config.js HTTP/1.1" 304 0
+2016-09-13 13:33:45,163 [Thread-61:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/kindeditor-min.js HTTP/1.1" 404 1727
+2016-09-13 13:34:38,628 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/add/ HTTP/1.1" 200 9541
+2016-09-13 13:34:38,654 [Thread-4:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2016-09-13 13:34:38,657 [Thread-7:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,658 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 13:34:38,659 [Thread-8:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,664 [Thread-6:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 13:34:38,666 [Thread-9:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,667 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2016-09-13 13:34:38,668 [Thread-10:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,672 [Thread-12:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,675 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 13:34:38,676 [Thread-14:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,677 [Thread-15:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,680 [Thread-16:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,686 [Thread-17:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:34:38,688 [Thread-18:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/config.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,689 [Thread-19:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,694 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,698 [Thread-21:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2016-09-13 13:34:38,699 [Thread-5:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/kindeditor-all-min.js HTTP/1.1" 200 186117
+2016-09-13 13:34:38,701 [Thread-22:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-13 13:34:38,704 [Thread-23:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-13 13:34:38,747 [Thread-24:123145310715904] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-13 13:34:38,771 [Thread-25:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:34:38,773 [Thread-26:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:34:38,774 [Thread-27:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 13:34:38,783 [Thread-28:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/themes/default/default.css HTTP/1.1" 200 20773
+2016-09-13 13:34:38,852 [Thread-29:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/themes/default/default.png HTTP/1.1" 200 8299
+2016-09-13 14:01:03,977 [Thread-1:123145310715904] [blog.views:22] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-13 14:01:03,980 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-13 14:01:09,773 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 14:01:11,850 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4157
+2016-09-13 14:01:11,866 [Thread-5:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:01:14,332 [Thread-6:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 14:01:16,346 [Thread-7:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/add/ HTTP/1.1" 200 14699
+2016-09-13 14:01:16,360 [Thread-8:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:02:51,349 [Thread-9:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/add/ HTTP/1.1" 200 14909
+2016-09-13 14:02:51,366 [Thread-10:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:03:04,288 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/add/ HTTP/1.1" 200 14862
+2016-09-13 14:03:04,302 [Thread-12:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:03:27,099 [Thread-13:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/add/ HTTP/1.1" 200 14862
+2016-09-13 14:03:27,113 [Thread-14:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:03:48,235 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/add/ HTTP/1.1" 200 14699
+2016-09-13 14:03:48,613 [Thread-16:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 14:03:50,263 [Thread-17:123145319129088] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4157
+2016-09-13 14:03:50,277 [Thread-18:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:03:51,354 [Thread-19:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15222
+2016-09-13 14:03:51,368 [Thread-20:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:04:13,526 [Thread-21:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 14:04:13,568 [Thread-22:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 14:04:13,584 [Thread-23:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:04:31,514 [Thread-24:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15222
+2016-09-13 14:04:31,529 [Thread-25:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:04:49,163 [Thread-26:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 14:04:49,192 [Thread-27:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 14:04:49,206 [Thread-28:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:04:52,092 [Thread-29:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15222
+2016-09-13 14:04:52,109 [Thread-30:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:11:45,394 [Thread-1:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 14:11:45,413 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/login/?next=/admin/blog/user/1/change/ HTTP/1.1" 200 1691
+2016-09-13 14:11:45,425 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-13 14:11:45,425 [Thread-5:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/login.css HTTP/1.1" 304 0
+2016-09-13 14:11:45,429 [Thread-6:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-13 14:11:45,435 [Thread-8:123145314922496] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-13 14:11:45,436 [Thread-7:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-13 14:11:50,895 [Thread-9:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/login/?next=/admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 14:11:50,975 [Thread-10:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15356
+2016-09-13 14:11:50,991 [Thread-11:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:11:51,043 [Thread-12:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-13 14:12:05,202 [Thread-13:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 14:12:05,242 [Thread-14:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 14:12:05,257 [Thread-15:123145310715904] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:15:26,650 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15356
+2016-09-13 14:15:26,677 [Thread-8:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:15:36,193 [Thread-9:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 14:15:36,364 [Thread-10:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 14:15:36,401 [Thread-11:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:16:51,602 [Thread-12:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15356
+2016-09-13 14:16:51,633 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:17:22,365 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 14:17:22,484 [Thread-15:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 14:17:22,527 [Thread-16:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 14:17:48,667 [Thread-17:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15356
+2016-09-13 14:17:48,709 [Thread-18:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:20:39,892 [Thread-7:123145323335680] [blog.views:22] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-13 15:20:39,907 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-13 15:20:40,007 [Thread-8:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /favicon.ico
+2016-09-13 15:20:40,009 [Thread-8:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 2307
+2016-09-13 15:20:44,454 [Thread-9:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 6234
+2016-09-13 15:20:44,456 [Thread-10:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 6234
+2016-09-13 15:20:44,456 [Thread-9:123145331748864] [django.server:85] [basehttp:handle_error] [INFO] - - Broken pipe from ('127.0.0.1', 49549)
+
+2016-09-13 15:20:49,363 [Thread-11:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/add/ HTTP/1.1" 200 14682
+2016-09-13 15:20:49,400 [Thread-12:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:20:56,751 [Thread-15:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4157
+2016-09-13 15:20:56,785 [Thread-16:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:20:58,442 [Thread-17:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15356
+2016-09-13 15:20:58,481 [Thread-18:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:21:13,209 [Thread-19:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 15:21:13,336 [Thread-20:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 15:21:13,369 [Thread-21:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:21:24,046 [Thread-22:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15356
+2016-09-13 15:21:24,082 [Thread-23:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:22:28,964 [Thread-24:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 15:22:29,086 [Thread-25:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 15:22:29,136 [Thread-26:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:23:17,062 [Thread-27:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15356
+2016-09-13 15:39:09,200 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 15:39:09,345 [Thread-8:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 15:39:09,396 [Thread-9:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:39:13,253 [Thread-10:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15356
+2016-09-13 15:39:13,293 [Thread-11:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:53:31,807 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 15:53:31,978 [Thread-8:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 15:53:32,022 [Thread-9:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:54:59,481 [Thread-10:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-13 15:55:01,330 [Thread-11:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4157
+2016-09-13 15:55:01,369 [Thread-12:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:55:03,587 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/1/change/ HTTP/1.1" 200 15356
+2016-09-13 15:55:03,624 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 15:55:17,347 [Thread-15:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/user/1/change/ HTTP/1.1" 302 0
+2016-09-13 15:55:17,497 [Thread-16:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4334
+2016-09-13 15:55:17,537 [Thread-17:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-13 16:03:48,981 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /uploads/avatar/3/14/user.jpeg HTTP/1.1" 200 54777
+2016-09-13 16:04:00,544 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/user/ HTTP/1.1" 200 4157
