@@ -21,6 +21,7 @@ from blog.views import index
 from blog.views import index2
 from django.conf import settings
 from django.views.static import serve
+from blog.upload import upload_image
 # 注意文件的目录结构
 
 urlpatterns = [
@@ -28,7 +29,6 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'index2', index2, name='index2'),
     # 注意参数以及别名
-    url(r"^uploads/(?P<path>.*)$", \
-                    serve, \
-                    {"document_root": settings.MEDIA_ROOT, }),
+    url(r"^uploads/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT}),
+    url(r'^admin/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
 ]
