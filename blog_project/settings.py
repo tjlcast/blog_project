@@ -79,13 +79,13 @@ WSGI_APPLICATION = 'blog_project.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default.png': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'USER': 'root',
         'PASSWORD': 'destination',
     }
-    # 'default' : {
+    # 'default.png' : {
     #     'ENGINE' : 'django.db.backends.mysql',
     #     'NAME' : 'blogdb', # 数据库名称
     #     'USER' : '',
@@ -172,7 +172,7 @@ LOGGING = {
             'class' : 'django.utils.log.AdminEmailHandler',
             'include_html' : True,
         },
-        'default' : {
+        'default.png' : {
             'level' : 'DEBUG',
             'class' : 'logging.handlers.RotatingFileHandler',
             'filename' : 'log/all.log', #  	日志输出文件
@@ -212,7 +212,7 @@ LOGGING = {
     } ,
     'loggers' : {
         'django' : {
-            'handlers' : ['default', 'console'],
+            'handlers' : ['default.png', 'console'],
             'propagate' : False,
         } ,
         'django.requst' : {
@@ -226,7 +226,7 @@ LOGGING = {
             'propagate' : False
         },
         'blog.views' : {
-            'handlers' : ['default', 'error'],
+            'handlers' : ['default.png', 'error'],
             'level' : 'DEBUG' ,
             'propagate' : True,
         },
