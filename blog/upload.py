@@ -11,7 +11,7 @@ import datetime as dt
 
 @csrf_exempt
 def upload_image(request, dir_name) :
-    # kindeditor 图片上传返回数据格式说明
+    # kindeditor 图片上传返回数据格式说明 （格式为kindeditor要求）
     # {‘error’: 1, 'message': '出错信息'｝
     # {'error': 0, 'url' : '图片地址'}
 
@@ -42,9 +42,9 @@ def image_upload(files, dir_name) :
     relative_path_file = upload_generation_dir(dir_name)
     path = os.path.join(settings.MEDIA_ROOT, relative_path_file)
     if not os.path.exists(path): # 如果目录不存在，则创建目录
-        os.mkdir(path)
-    file_name = str(uuid.uuid1()) + '.' + file_suffix
+        os.makedirs(path)
+    file_name = str(uuid.uuid1()) + '.' + file_suffix # 为上传文件重新命名
     path_file = os.path.join(path, file_name)
     file_url = settings.MEDIA_URL + relative_path_file + file_name
-    open(path_file, 'wb').write(files.file.read())
+    open(path_file, 'wb').write(files.file.read()) # 保存文件，由request传来字节码，再写入
     return {'error': 0, 'url': file_url}
