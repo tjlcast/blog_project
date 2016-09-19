@@ -4,7 +4,7 @@ $(function(){
  slider.init();
 
 
- $('input.text-default').each(function(){
+ $('input.text-default.png').each(function(){
   $(this).attr('default',$(this).val());
  }).focus(function(){
   if($(this).val()==$(this).attr('default'))

@@ -331,7 +331,7 @@ function KEditor(options) {
 	_each(options, function(key, val) {
 		setOption(key, options[key]);
 	});
-	// set options from default setting
+	// set options from default.png setting
 	_each(K.options, function(key, val) {
 		if (self[key] === undefined) {
 			setOption(key, val);
@@ -1025,7 +1025,7 @@ function _create(expr, options) {
 	// 自动加载CSS文件
 	if (_undef(options.loadStyleMode, K.options.loadStyleMode)) {
 		var themeType = _undef(options.themeType, K.options.themeType);
-		_loadStyle(options.themesPath + 'default/default.css');
+		_loadStyle(options.themesPath + 'default.png/default.png.css');
 		_loadStyle(options.themesPath + themeType + '/' + themeType + '.css');
 	}
 	function create(editor) {

@@ -413,7 +413,7 @@ SWFUpload.completeURL = function(url) {
 /* ******************** */
 
 // Private: initSettings ensures that all the
-// settings are set, getting a default value if one was not assigned.
+// settings are set, getting a default.png value if one was not assigned.
 SWFUpload.prototype.initSettings = function () {
 	this.ensureDefault = function (settingName, defaultValue) {
 		this.settings[settingName] = (this.settings[settingName] == undefined) ? defaultValue : this.settings[settingName];
@@ -1206,7 +1206,7 @@ SWFUpload.prototype.uploadComplete = function (file) {
 	this.queueEvent("upload_complete_handler", file);
 };
 
-/* Called by SWFUpload JavaScript and Flash functions when debug is enabled. By default it writes messages to the
+/* Called by SWFUpload JavaScript and Flash functions when debug is enabled. By default.png it writes messages to the
    internal debug console.  You can override this event and have messages written where you want. */
 SWFUpload.prototype.debug = function (message) {
 	this.queueEvent("debug_handler", message);
@@ -1226,7 +1226,7 @@ SWFUpload.prototype.debug = function (message) {
 	and complexity.
 ********************************** */
 
-// Private: debugMessage is the default debug_handler.  If you want to print debug messages
+// Private: debugMessage is the default.png debug_handler.  If you want to print debug messages
 // call the debug() function.  When overriding the function your own function should
 // check to see if the debug setting is true before outputting debug information.
 SWFUpload.prototype.debugMessage = function (message) {
@@ -1342,7 +1342,7 @@ if (typeof(SWFUpload) === "function") {
 			returnValue = this.queueSettings.user_upload_start_handler.call(this, file);
 		}
 
-		// To prevent upload a real "FALSE" value must be returned, otherwise default to a real "TRUE" value.
+		// To prevent upload a real "FALSE" value must be returned, otherwise default.png to a real "TRUE" value.
 		returnValue = (returnValue === false) ? false : true;
 
 		this.queueSettings.queue_cancelled_flag = !returnValue;

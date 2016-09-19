@@ -45,7 +45,7 @@ class ArticleAdmin(admin.ModelAdmin):
 admin.site.register(User)
 admin.site.register(Tag)
 admin.site.register(Catagory)
-admin.site.register(Article)
+admin.site.register(Article, ArticleAdmin)
 admin.site.register(Comment)
 admin.site.register(Links)
 admin.site.register(Ad)
