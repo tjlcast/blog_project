@@ -6,7 +6,7 @@
     <div class="topnews">
       <h2><span><a href="/" target="_blank">栏目标题</a><a href="/" target="_blank">栏目标题</a><a href="/" target="_blank">栏目标题</a></span><b>文章</b>推荐</h2>
       <div class="blogs">
-        <figure><img src="images/01.jpg"></figure>
+        <figure><img src="{% static 'images/02.jpg' %}"></figure>
         <ul>
           <h3><a href="/">This template artilce</a></h3>
           <p>通信时代，无论是初次相见还是老友重逢，交换联系方式，常常是彼此交换名片，然后郑重或是出于礼貌用手机记下对方的电话号码。在快节奏的生活里，我们不知不觉中就成为住在别人手机里的朋友。又因某些意外，变成了别人手机里匆忙的过客，这种快餐式的友谊 ...</p>
@@ -15,7 +15,7 @@
       </div>
       {% for article in article_list %}
         <div class="blogs">
-        <figure><img src="images/01.jpg"></figure>
+        <figure><img src="{% static 'images/01.jpg' %}"></figure>
         <ul>
           <h3><a href="/">{{ article.title }}</a></h3>
           <p>{{ article.desc }} ...</p>
@@ -26,16 +26,20 @@
     </div>
 
     <div id="pagination">
-        <ul>
-            <li>
+        <ul id="pagination-flickr">
+            {% if article_list.has_previous %}
+                <li class="previous"  style="float:left;"><a href="?page={{ article_list.previous_page_number }}"><<上页</a></li>
+            {% else %}
+{#                <li class="previous-off"  style="float:left;"><<上页</li>#}
+            {% endif %}
 
-            </li>
-            <li>
+            <li class="active"  style="float:left;">{{ article_list.number }}/{{ article_list.paginator.num_pages }}</li>
 
-            </li>
-            <li>
-
-            </li>
+            {% if article_list.has_next %}
+                <li class="next"  style="float:left;"><a href="?page={{ article_list.next_page_number }}">下页>></a></li>
+            {% else %}
+{#                <li class="next-off"  style="float:left;">下页>></li>#}
+            {% endif %}
         </ul>
     </div>
 {% endblock %}

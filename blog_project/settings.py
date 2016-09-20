@@ -152,7 +152,7 @@ PRO_EMAIL = 'phx108@sina.com'
 
 # 媒体文件路径
 MEDIA_URL = '/uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads/')
 
 
 # 自定义日志输出信息

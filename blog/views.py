@@ -31,7 +31,7 @@ def index2(request):
         category_list = Catagory.objects.all()
 
         article_list = Article.objects.all()
-        paginator = Paginator(article_list, 10) # 一页10条信息
+        paginator = Paginator(article_list, 1) # 一页10条信息
         try:
             page = int(request.GET.get('page', 1)) # 当前页
             article_list = paginator.page(page)
