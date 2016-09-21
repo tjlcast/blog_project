@@ -19,6 +19,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from blog.views import index
 from blog.views import index2
+from blog.views import article
 from blog.views import index_bak
 from django.conf import settings
 from django.views.static import serve
@@ -33,4 +34,5 @@ urlpatterns = [
     # 注意参数以及别名
     url(r"^uploads/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT}),
     url(r'^admin/upload/(?P<dir_name>[^/]+)$', upload_image, name='upload_image'),
+    url(r'article/$', article, name='article'),
 ]

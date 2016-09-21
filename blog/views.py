@@ -37,6 +37,11 @@ def index2(request):
             article_list = paginator.page(page)
         except (EmptyPage, InvalidPage, PageNotAnInteger):
             article_list = paginator.page(1)
+
+        # 文章归档
+        # 1, 先去获取到文章中有的 年份和月份
+
+        # 2,
     except Exception as e:
         logger.error(e)
     # return render(request, 'new_index.html', {'category_list' : category_list})
@@ -45,3 +50,15 @@ def index2(request):
 
 def index_bak(request):
     return render(request, 'new_index_bak.html', locals())
+
+
+# 文章详情
+def article(request):
+    id = request.GET.get('id', None)
+    try:
+        article = Article.objects.get(pk=id)
+        comment_list = article.comment_set.all()
+    except Exception as e:
+        return render(request, 'failure.html', {'reason' : '没有找到对应的文章'})
+    return render(request, 'article.html', locals())
+

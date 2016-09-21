@@ -4818,3 +4818,685 @@ UnicodeDecodeError: 'utf8' codec can't decode byte 0xb7 in position 615: invalid
 2016-09-20 02:47:53,185 [Thread-80:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2599
 2016-09-20 02:47:53,186 [Thread-81:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
 2016-09-20 02:47:53,189 [Thread-81:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2599
+2016-09-21 15:39:30,795 [Thread-7:123145323335680] [blog.views:25] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-21 15:39:30,811 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-21 15:39:30,864 [Thread-8:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /favicon.ico
+2016-09-21 15:39:30,865 [Thread-8:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /favicon.ico HTTP/1.1" 404 2718
+2016-09-21 15:39:38,961 [Thread-9:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 10899
+2016-09-21 15:39:38,982 [Thread-10:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-21 15:39:38,990 [Thread-11:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-21 15:39:39,009 [Thread-12:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 15:39:39,023 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:39:39,029 [Thread-14:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 304 0
+2016-09-21 15:39:39,072 [Thread-16:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-21 15:39:39,089 [Thread-15:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 15:39:39,096 [Thread-17:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-21 15:39:39,128 [Thread-15:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 15:39:39,124 [Thread-16:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2724
+2016-09-21 15:39:39,177 [Thread-21:123145348575232] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-21 15:39:39,186 [Thread-17:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2724
+2016-09-21 15:39:39,190 [Thread-21:123145348575232] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2724
+2016-09-21 15:39:39,193 [Thread-20:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-21 15:39:39,203 [Thread-20:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2745
+2016-09-21 15:39:39,232 [Thread-18:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-21 15:39:39,246 [Thread-19:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-21 15:39:39,252 [Thread-22:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-21 15:39:39,271 [Thread-18:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2724
+2016-09-21 15:39:39,274 [Thread-23:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-21 15:39:39,283 [Thread-19:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2724
+2016-09-21 15:39:39,297 [Thread-23:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2724
+2016-09-21 15:39:39,295 [Thread-22:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2724
+2016-09-21 15:39:39,332 [Thread-25:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-21 15:39:39,342 [Thread-24:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-21 15:39:39,345 [Thread-25:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2724
+2016-09-21 15:39:39,346 [Thread-24:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2724
+2016-09-21 15:39:45,488 [Thread-26:123145323335680] [blog.views:25] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-21 15:39:45,492 [Thread-26:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-21 15:41:37,880 [Thread-27:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 10913
+2016-09-21 15:41:37,915 [Thread-28:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 15:41:37,928 [Thread-29:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:41:37,947 [Thread-30:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 15:41:37,949 [Thread-30:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 15:41:37,986 [Thread-31:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-21 15:41:38,025 [Thread-33:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-21 15:41:38,028 [Thread-32:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-21 15:41:38,042 [Thread-31:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2724
+2016-09-21 15:41:38,068 [Thread-35:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-21 15:41:38,054 [Thread-33:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2724
+2016-09-21 15:41:38,073 [Thread-34:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-21 15:41:38,075 [Thread-32:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2724
+2016-09-21 15:41:38,082 [Thread-35:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2745
+2016-09-21 15:41:38,143 [Thread-34:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2724
+2016-09-21 15:41:38,200 [Thread-36:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-21 15:41:38,207 [Thread-36:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2724
+2016-09-21 15:41:38,212 [Thread-37:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-21 15:41:38,225 [Thread-38:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-21 15:41:38,236 [Thread-37:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2724
+2016-09-21 15:41:38,237 [Thread-40:123145348575232] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-21 15:41:38,238 [Thread-38:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2724
+2016-09-21 15:41:38,252 [Thread-39:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-21 15:41:38,254 [Thread-40:123145348575232] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2724
+2016-09-21 15:41:38,256 [Thread-39:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2724
+2016-09-21 15:41:40,959 [Thread-41:123145323335680] [blog.views:25] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-21 15:41:40,961 [Thread-41:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-21 15:42:38,646 [Thread-42:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 10913
+2016-09-21 15:42:38,694 [Thread-43:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 15:42:38,707 [Thread-44:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:42:38,728 [Thread-45:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 15:42:38,729 [Thread-45:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 15:42:38,808 [Thread-49:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-21 15:42:38,844 [Thread-50:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-21 15:42:38,849 [Thread-47:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-21 15:42:38,860 [Thread-46:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-21 15:42:38,861 [Thread-49:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2724
+2016-09-21 15:42:38,864 [Thread-50:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2745
+2016-09-21 15:42:38,866 [Thread-48:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-21 15:42:38,877 [Thread-46:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2724
+2016-09-21 15:42:38,880 [Thread-47:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2724
+2016-09-21 15:42:38,899 [Thread-48:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2724
+2016-09-21 15:42:38,950 [Thread-52:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-21 15:42:38,968 [Thread-52:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2724
+2016-09-21 15:42:38,973 [Thread-54:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-21 15:42:39,002 [Thread-55:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-21 15:42:39,003 [Thread-54:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2724
+2016-09-21 15:42:39,007 [Thread-55:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2724
+2016-09-21 15:42:39,010 [Thread-51:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-21 15:42:39,016 [Thread-53:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-21 15:42:39,020 [Thread-53:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2724
+2016-09-21 15:42:39,023 [Thread-51:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,098 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 10913
+2016-09-21 15:43:38,130 [Thread-10:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-21 15:43:38,133 [Thread-8:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-21 15:43:38,137 [Thread-9:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-21 15:43:38,148 [Thread-11:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-21 15:43:38,177 [Thread-12:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 15:43:38,213 [Thread-14:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 15:43:38,215 [Thread-14:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 15:43:38,226 [Thread-15:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 304 0
+2016-09-21 15:43:38,253 [Thread-16:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-21 15:43:38,254 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:43:38,255 [Thread-16:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,310 [Thread-21:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/02.jpg HTTP/1.1" 304 0
+2016-09-21 15:43:38,312 [Thread-22:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/01.jpg HTTP/1.1" 304 0
+2016-09-21 15:43:38,321 [Thread-17:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 15:43:38,368 [Thread-17:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 15:43:38,429 [Thread-23:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-21 15:43:38,457 [Thread-23:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2745
+2016-09-21 15:43:38,484 [Thread-18:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-21 15:43:38,485 [Thread-18:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,490 [Thread-20:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-21 15:43:38,492 [Thread-20:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,599 [Thread-19:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-21 15:43:38,613 [Thread-28:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-21 15:43:38,617 [Thread-28:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,624 [Thread-19:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,684 [Thread-24:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-21 15:43:38,690 [Thread-24:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,693 [Thread-25:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-21 15:43:38,712 [Thread-26:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-21 15:43:38,718 [Thread-25:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,726 [Thread-26:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,732 [Thread-27:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-21 15:43:38,736 [Thread-29:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-21 15:43:38,740 [Thread-29:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:38,742 [Thread-27:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2724
+2016-09-21 15:43:40,425 [Thread-30:123145323335680] [blog.views:25] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-21 15:43:40,427 [Thread-30:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-21 15:43:42,998 [Thread-31:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:43:43,024 [Thread-32:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 15:43:43,026 [Thread-32:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 15:44:15,052 [Thread-37:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 10906
+2016-09-21 15:44:15,082 [Thread-39:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-21 15:44:15,084 [Thread-41:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-21 15:44:15,087 [Thread-40:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-21 15:44:15,085 [Thread-38:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-21 15:44:15,124 [Thread-43:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:44:15,126 [Thread-42:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 15:44:15,168 [Thread-44:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 15:44:15,169 [Thread-45:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:44:15,173 [Thread-44:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 15:44:15,180 [Thread-46:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 304 0
+2016-09-21 15:44:15,287 [Thread-51:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/02.jpg HTTP/1.1" 304 0
+2016-09-21 15:44:15,294 [Thread-50:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-21 15:44:15,298 [Thread-52:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/01.jpg HTTP/1.1" 304 0
+2016-09-21 15:44:15,333 [Thread-50:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2724
+2016-09-21 15:44:15,346 [Thread-49:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-21 15:44:15,375 [Thread-47:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-21 15:44:15,414 [Thread-49:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2724
+2016-09-21 15:44:15,415 [Thread-48:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-21 15:44:15,416 [Thread-47:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2724
+2016-09-21 15:44:15,421 [Thread-53:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-21 15:44:15,461 [Thread-48:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2724
+2016-09-21 15:44:15,477 [Thread-53:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2745
+2016-09-21 15:44:15,483 [Thread-54:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-21 15:44:15,517 [Thread-56:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-21 15:44:15,531 [Thread-55:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-21 15:44:15,546 [Thread-56:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2724
+2016-09-21 15:44:15,556 [Thread-54:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2724
+2016-09-21 15:44:15,564 [Thread-57:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-21 15:44:15,572 [Thread-55:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2724
+2016-09-21 15:44:15,584 [Thread-57:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2724
+2016-09-21 15:44:15,593 [Thread-58:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-21 15:44:15,597 [Thread-58:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2724
+2016-09-21 15:44:17,757 [Thread-59:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /article HTTP/1.1" 301 0
+2016-09-21 15:44:17,768 [Thread-60:123145323335680] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 61, in article
+    return render(request, 'failure.html', {'reason' : '没有找到对应的文章'})
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: failure.html
+2016-09-21 15:44:18,135 [Thread-60:123145323335680] [django.server:131] [basehttp:log_message] [ERROR] - "GET /article/ HTTP/1.1" 500 83701
+2016-09-21 15:45:04,721 [Thread-7:123145323335680] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 62, in article
+    return render(request, 'failure.html', {'reason' : '没有找到对应的文章'})
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: failure.html
+2016-09-21 15:45:05,041 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [ERROR] - "GET /article/ HTTP/1.1" 500 83716
+2016-09-21 15:47:48,874 [Thread-7:123145323335680] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 61, in article
+    return render(request, 'failure.html', {'reason' : '没有找到对应的文章'})
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 25, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+TemplateDoesNotExist: failure.html
+2016-09-21 15:47:49,228 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [ERROR] - "GET /article/ HTTP/1.1" 500 84224
+2016-09-21 15:47:49,229 [Thread-7:123145323335680] [django.server:85] [basehttp:handle_error] [INFO] - - Broken pipe from ('127.0.0.1', 52958)
+
+2016-09-21 15:47:56,087 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 10912
+2016-09-21 15:47:56,108 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-21 15:47:56,115 [Thread-15:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-21 15:47:56,123 [Thread-16:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-21 15:47:56,135 [Thread-17:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-21 15:47:56,181 [Thread-18:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 15:47:56,183 [Thread-19:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:47:56,231 [Thread-21:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:47:56,237 [Thread-20:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 15:47:56,258 [Thread-20:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 15:47:56,272 [Thread-22:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 304 0
+2016-09-21 15:47:56,299 [Thread-23:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-21 15:47:56,303 [Thread-23:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2724
+2016-09-21 15:47:56,360 [Thread-27:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/02.jpg HTTP/1.1" 304 0
+2016-09-21 15:47:56,392 [Thread-28:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/01.jpg HTTP/1.1" 304 0
+2016-09-21 15:47:56,393 [Thread-24:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-21 15:47:56,437 [Thread-25:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-21 15:47:56,478 [Thread-24:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2724
+2016-09-21 15:47:56,488 [Thread-26:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-21 15:47:56,514 [Thread-26:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2724
+2016-09-21 15:47:56,542 [Thread-31:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-21 15:47:56,536 [Thread-30:123145348575232] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-21 15:47:56,544 [Thread-29:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-21 15:47:56,542 [Thread-25:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2724
+2016-09-21 15:47:56,577 [Thread-30:123145348575232] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2724
+2016-09-21 15:47:56,582 [Thread-31:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2724
+2016-09-21 15:47:56,600 [Thread-32:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-21 15:47:56,605 [Thread-29:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2745
+2016-09-21 15:47:56,610 [Thread-32:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2724
+2016-09-21 15:47:56,631 [Thread-33:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-21 15:47:56,651 [Thread-33:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2724
+2016-09-21 15:47:56,662 [Thread-34:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-21 15:47:56,664 [Thread-34:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2724
+2016-09-21 15:48:18,133 [Thread-35:123145323335680] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 62, in article
+    return render(request, 'article.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'myfilter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2016-09-21 15:48:18,622 [Thread-35:123145323335680] [django.server:131] [basehttp:log_message] [ERROR] - "GET /article/?id=2 HTTP/1.1" 500 120928
+2016-09-21 15:49:06,219 [Thread-37:123145323335680] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 62, in article
+    return render(request, 'article.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: 'myfilter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2016-09-21 15:49:06,680 [Thread-37:123145323335680] [django.server:131] [basehttp:log_message] [ERROR] - "GET /article/?id=2 HTTP/1.1" 500 119732
+2016-09-21 15:49:32,327 [Thread-38:123145323335680] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 62, in article
+    return render(request, 'article.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid filter: 'month_to_upper'
+2016-09-21 15:49:32,755 [Thread-38:123145323335680] [django.server:131] [basehttp:log_message] [ERROR] - "GET /article/?id=2 HTTP/1.1" 500 118742
+2016-09-21 15:49:36,121 [Thread-39:123145323335680] [django.request:124] [exception:handle_uncaught_exception] [ERROR] - Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/tangjialiang/PycharmProjects/blog_project/blog/views.py", line 62, in article
+    return render(request, 'article.html', locals())
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/shortcuts.py", line 30, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 67, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loader.py", line 21, in get_template
+    return engine.get_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/backends/django.py", line 39, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 160, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/engine.py", line 134, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/loaders/base.py", line 44, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 191, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 233, in compile_nodelist
+    return parser.parse()
+  File "/Users/tangjialiang/PycharmProjects/blog_project_venv/lib/python2.7/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+TemplateSyntaxError: Invalid filter: 'month_to_upper'
+2016-09-21 15:49:36,546 [Thread-39:123145323335680] [django.server:131] [basehttp:log_message] [ERROR] - "GET /article/?id=2 HTTP/1.1" 500 118742
+2016-09-21 15:50:09,596 [Thread-40:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /article/?id=2 HTTP/1.1" 200 7977
+2016-09-21 15:50:09,623 [Thread-42:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-21 15:50:09,625 [Thread-41:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-21 15:50:09,629 [Thread-43:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-21 15:50:09,649 [Thread-44:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:50:09,669 [Thread-46:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 15:50:09,671 [Thread-45:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-21 15:50:09,706 [Thread-48:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 15:50:09,723 [Thread-49:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 15:50:09,817 [Thread-47:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/js/nav.js
+2016-09-21 15:50:09,821 [Thread-51:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/01.jpg
+2016-09-21 15:50:09,826 [Thread-54:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 304 0
+2016-09-21 15:50:09,843 [Thread-53:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/03.jpg
+2016-09-21 15:50:09,838 [Thread-47:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/js/nav.js HTTP/1.1" 404 2736
+2016-09-21 15:50:09,846 [Thread-50:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/ad300x100.jpg
+2016-09-21 15:50:09,847 [Thread-51:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/01.jpg HTTP/1.1" 404 2748
+2016-09-21 15:50:09,882 [Thread-53:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/03.jpg HTTP/1.1" 404 2748
+2016-09-21 15:50:09,883 [Thread-52:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/02.jpg
+2016-09-21 15:50:09,892 [Thread-50:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/ad300x100.jpg HTTP/1.1" 404 2769
+2016-09-21 15:50:09,920 [Thread-52:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/02.jpg HTTP/1.1" 404 2748
+2016-09-21 15:50:09,939 [Thread-55:123145348575232] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/06.jpg
+2016-09-21 15:50:09,941 [Thread-55:123145348575232] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/06.jpg HTTP/1.1" 404 2748
+2016-09-21 15:50:09,948 [Thread-56:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/04.jpg
+2016-09-21 15:50:09,950 [Thread-56:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/04.jpg HTTP/1.1" 404 2748
+2016-09-21 15:52:51,638 [Thread-57:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 8245
+2016-09-21 15:52:51,659 [Thread-58:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/base.css HTTP/1.1" 304 0
+2016-09-21 15:52:51,662 [Thread-59:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+2016-09-21 15:52:51,668 [Thread-60:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+2016-09-21 15:52:51,683 [Thread-62:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+2016-09-21 15:52:51,687 [Thread-61:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+2016-09-21 15:52:51,693 [Thread-63:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+2016-09-21 15:52:51,697 [Thread-65:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+2016-09-21 15:52:51,699 [Thread-64:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+2016-09-21 15:52:52,216 [Thread-66:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 8245
+2016-09-21 15:52:55,016 [Thread-67:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 5285
+2016-09-21 15:52:55,041 [Thread-71:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/core.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,050 [Thread-69:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,054 [Thread-72:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,065 [Thread-70:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+2016-09-21 15:52:55,073 [Thread-74:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,084 [Thread-73:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,090 [Thread-76:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,090 [Thread-75:123145348575232] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,092 [Thread-77:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,100 [Thread-78:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/kindeditor-all-min.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,112 [Thread-79:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-21 15:52:55,118 [Thread-80:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/kindeditor-master/config.js HTTP/1.1" 304 0
+2016-09-21 15:52:55,125 [Thread-68:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 15:52:55,202 [Thread-81:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-21 15:52:55,215 [Thread-82:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+2016-09-21 15:52:55,253 [Thread-83:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/themes/default.png/default.png.css HTTP/1.1" 404 1778
+2016-09-21 15:52:56,895 [Thread-84:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/2/change/ HTTP/1.1" 200 11541
+2016-09-21 15:52:56,936 [Thread-85:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+2016-09-21 15:52:56,960 [Thread-86:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-21 15:52:56,969 [Thread-89:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+2016-09-21 15:52:56,972 [Thread-88:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+2016-09-21 15:52:56,980 [Thread-90:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+2016-09-21 15:52:56,991 [Thread-87:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 15:52:56,992 [Thread-91:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+2016-09-21 15:52:57,025 [Thread-92:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-21 15:52:57,077 [Thread-93:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/themes/default.png/default.png.css HTTP/1.1" 404 1778
+2016-09-21 15:52:57,164 [Thread-94:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /uploads/kindeditor/2016/9/4227257a-7ed9-11e6-b1b9-c4b301986dec.jpg HTTP/1.1" 200 8029
+2016-09-21 15:53:09,873 [Thread-95:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/themes/default.png/default.png.css HTTP/1.1" 404 1778
+2016-09-21 16:01:51,245 [Thread-7:123145323335680] [blog.views:25] [views:index] [ERROR] - [Errno 2] No such file or directory: 'sss.txt'
+2016-09-21 16:01:51,253 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET / HTTP/1.1" 200 187
+2016-09-21 16:02:04,550 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 10912
+2016-09-21 16:02:04,581 [Thread-14:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 16:02:04,593 [Thread-15:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:02:04,617 [Thread-16:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 16:02:04,624 [Thread-16:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 16:02:04,660 [Thread-19:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-21 16:02:04,677 [Thread-19:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2724
+2016-09-21 16:02:04,699 [Thread-17:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-21 16:02:04,719 [Thread-21:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-21 16:02:04,739 [Thread-21:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2745
+2016-09-21 16:02:04,737 [Thread-18:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-21 16:02:04,737 [Thread-17:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2724
+2016-09-21 16:02:04,744 [Thread-20:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-21 16:02:04,753 [Thread-18:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2724
+2016-09-21 16:02:04,764 [Thread-20:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2724
+2016-09-21 16:02:04,880 [Thread-23:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-21 16:02:04,890 [Thread-23:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2724
+2016-09-21 16:02:04,895 [Thread-24:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-21 16:02:04,905 [Thread-26:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-21 16:02:04,912 [Thread-24:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2724
+2016-09-21 16:02:04,919 [Thread-25:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-21 16:02:04,920 [Thread-26:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2724
+2016-09-21 16:02:04,923 [Thread-22:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-21 16:02:04,928 [Thread-25:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2724
+2016-09-21 16:02:04,932 [Thread-22:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2724
+2016-09-21 16:02:07,783 [Thread-27:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /article/?id=2 HTTP/1.1" 200 7977
+2016-09-21 16:02:07,813 [Thread-28:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 16:02:07,848 [Thread-30:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/js/nav.js
+2016-09-21 16:02:07,850 [Thread-30:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/js/nav.js HTTP/1.1" 404 2736
+2016-09-21 16:02:07,851 [Thread-29:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:02:07,897 [Thread-31:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/ad300x100.jpg
+2016-09-21 16:02:07,922 [Thread-34:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/03.jpg
+2016-09-21 16:02:07,932 [Thread-31:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/ad300x100.jpg HTTP/1.1" 404 2769
+2016-09-21 16:02:07,940 [Thread-32:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/01.jpg
+2016-09-21 16:02:07,949 [Thread-34:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/03.jpg HTTP/1.1" 404 2748
+2016-09-21 16:02:07,962 [Thread-32:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/01.jpg HTTP/1.1" 404 2748
+2016-09-21 16:02:07,979 [Thread-33:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/02.jpg
+2016-09-21 16:02:07,991 [Thread-33:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/02.jpg HTTP/1.1" 404 2748
+2016-09-21 16:02:08,006 [Thread-35:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/06.jpg
+2016-09-21 16:02:08,016 [Thread-36:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/04.jpg
+2016-09-21 16:02:08,017 [Thread-35:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/06.jpg HTTP/1.1" 404 2748
+2016-09-21 16:02:08,018 [Thread-36:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/04.jpg HTTP/1.1" 404 2748
+2016-09-21 16:03:00,859 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /article/?id=2 HTTP/1.1" 200 7977
+2016-09-21 16:03:00,877 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-21 16:03:00,885 [Thread-15:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-21 16:03:00,896 [Thread-16:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-21 16:03:00,909 [Thread-18:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-21 16:03:00,946 [Thread-17:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:03:00,960 [Thread-19:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 16:03:00,981 [Thread-20:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/js/nav.js
+2016-09-21 16:03:00,982 [Thread-21:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:03:00,984 [Thread-20:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/js/nav.js HTTP/1.1" 404 2736
+2016-09-21 16:03:01,021 [Thread-24:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/01.jpg
+2016-09-21 16:03:01,039 [Thread-24:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/01.jpg HTTP/1.1" 404 2748
+2016-09-21 16:03:01,032 [Thread-22:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 304 0
+2016-09-21 16:03:01,054 [Thread-25:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/02.jpg
+2016-09-21 16:03:01,081 [Thread-26:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/03.jpg
+2016-09-21 16:03:01,109 [Thread-28:123145348575232] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/04.jpg
+2016-09-21 16:03:01,111 [Thread-27:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/06.jpg
+2016-09-21 16:03:01,115 [Thread-25:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/02.jpg HTTP/1.1" 404 2748
+2016-09-21 16:03:01,116 [Thread-26:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/03.jpg HTTP/1.1" 404 2748
+2016-09-21 16:03:01,119 [Thread-23:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/ad300x100.jpg
+2016-09-21 16:03:01,121 [Thread-27:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/06.jpg HTTP/1.1" 404 2748
+2016-09-21 16:03:01,122 [Thread-28:123145348575232] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/04.jpg HTTP/1.1" 404 2748
+2016-09-21 16:03:01,127 [Thread-23:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/ad300x100.jpg HTTP/1.1" 404 2769
+2016-09-21 16:03:11,439 [Thread-29:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 8245
+2016-09-21 16:03:16,129 [Thread-30:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/comment/ HTTP/1.1" 200 3032
+2016-09-21 16:03:16,164 [Thread-31:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 16:03:18,398 [Thread-32:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-21 16:03:19,779 [Thread-33:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/ HTTP/1.1" 200 5285
+2016-09-21 16:03:19,822 [Thread-35:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-21 16:03:19,834 [Thread-34:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 16:03:19,875 [Thread-36:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-21 16:03:19,918 [Thread-37:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/themes/default.png/default.png.css HTTP/1.1" 404 1778
+2016-09-21 16:03:22,197 [Thread-38:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/article/2/change/ HTTP/1.1" 200 11541
+2016-09-21 16:03:22,242 [Thread-40:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-21 16:03:22,253 [Thread-39:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 16:03:22,284 [Thread-41:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/lang/zh_CN.js HTTP/1.1" 404 1715
+2016-09-21 16:03:22,337 [Thread-42:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/kindeditor-master/themes/default.png/default.png.css HTTP/1.1" 404 1778
+2016-09-21 16:03:27,030 [Thread-43:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/ HTTP/1.1" 200 4515
+2016-09-21 16:03:28,786 [Thread-44:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/comment/ HTTP/1.1" 200 3032
+2016-09-21 16:03:28,816 [Thread-45:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 16:03:30,935 [Thread-46:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/comment/add/ HTTP/1.1" 200 7417
+2016-09-21 16:03:30,976 [Thread-47:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 16:03:50,198 [Thread-48:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/comment/add/ HTTP/1.1" 302 0
+2016-09-21 16:03:50,323 [Thread-49:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/comment/ HTTP/1.1" 200 4336
+2016-09-21 16:03:50,354 [Thread-50:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 16:03:50,378 [Thread-51:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+2016-09-21 16:04:02,769 [Thread-52:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /index2 HTTP/1.1" 200 10912
+2016-09-21 16:04:02,800 [Thread-53:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 16:04:02,810 [Thread-54:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:04:02,833 [Thread-55:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /js/nav.js
+2016-09-21 16:04:02,834 [Thread-55:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /js/nav.js HTTP/1.1" 404 2712
+2016-09-21 16:04:02,869 [Thread-57:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a2.jpg
+2016-09-21 16:04:02,902 [Thread-57:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a2.jpg HTTP/1.1" 404 2724
+2016-09-21 16:04:02,918 [Thread-58:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a3.jpg
+2016-09-21 16:04:02,933 [Thread-56:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a1.jpg
+2016-09-21 16:04:02,933 [Thread-59:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/a4.jpg
+2016-09-21 16:04:02,985 [Thread-60:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/ad300x100.jpg
+2016-09-21 16:04:02,990 [Thread-59:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a4.jpg HTTP/1.1" 404 2724
+2016-09-21 16:04:02,990 [Thread-61:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/01.jpg
+2016-09-21 16:04:02,994 [Thread-58:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a3.jpg HTTP/1.1" 404 2724
+2016-09-21 16:04:02,989 [Thread-56:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/a1.jpg HTTP/1.1" 404 2724
+2016-09-21 16:04:03,005 [Thread-60:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/ad300x100.jpg HTTP/1.1" 404 2745
+2016-09-21 16:04:03,008 [Thread-61:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/01.jpg HTTP/1.1" 404 2724
+2016-09-21 16:04:03,029 [Thread-62:123145348575232] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/02.jpg
+2016-09-21 16:04:03,064 [Thread-64:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/06.jpg
+2016-09-21 16:04:03,066 [Thread-62:123145348575232] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/02.jpg HTTP/1.1" 404 2724
+2016-09-21 16:04:03,088 [Thread-64:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/06.jpg HTTP/1.1" 404 2724
+2016-09-21 16:04:03,086 [Thread-63:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/03.jpg
+2016-09-21 16:04:03,094 [Thread-63:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/03.jpg HTTP/1.1" 404 2724
+2016-09-21 16:04:03,098 [Thread-65:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /images/04.jpg
+2016-09-21 16:04:03,100 [Thread-65:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /images/04.jpg HTTP/1.1" 404 2724
+2016-09-21 16:04:17,651 [Thread-66:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /article/?id=2 HTTP/1.1" 200 7977
+2016-09-21 16:04:17,685 [Thread-68:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 16:04:17,723 [Thread-69:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:04:17,740 [Thread-70:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/js/nav.js
+2016-09-21 16:04:17,759 [Thread-71:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/ad300x100.jpg
+2016-09-21 16:04:17,767 [Thread-70:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/js/nav.js HTTP/1.1" 404 2736
+2016-09-21 16:04:17,776 [Thread-71:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/ad300x100.jpg HTTP/1.1" 404 2769
+2016-09-21 16:04:17,829 [Thread-72:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/01.jpg
+2016-09-21 16:04:17,835 [Thread-75:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/06.jpg
+2016-09-21 16:04:17,839 [Thread-73:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/02.jpg
+2016-09-21 16:04:17,847 [Thread-74:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/03.jpg
+2016-09-21 16:04:17,851 [Thread-72:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/01.jpg HTTP/1.1" 404 2748
+2016-09-21 16:04:17,869 [Thread-75:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/06.jpg HTTP/1.1" 404 2748
+2016-09-21 16:04:17,871 [Thread-76:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/04.jpg
+2016-09-21 16:04:17,871 [Thread-73:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/02.jpg HTTP/1.1" 404 2748
+2016-09-21 16:04:17,872 [Thread-74:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/03.jpg HTTP/1.1" 404 2748
+2016-09-21 16:04:17,875 [Thread-76:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/04.jpg HTTP/1.1" 404 2748
+2016-09-21 16:05:09,502 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /article/?id=2 HTTP/1.1" 200 7977
+2016-09-21 16:05:09,559 [Thread-9:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:05:09,560 [Thread-11:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-21 16:05:09,562 [Thread-10:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-21 16:05:09,572 [Thread-12:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-21 16:05:09,574 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 16:05:09,573 [Thread-8:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-21 16:05:09,596 [Thread-14:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/js/nav.js
+2016-09-21 16:05:09,611 [Thread-15:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:05:09,614 [Thread-14:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/js/nav.js HTTP/1.1" 404 2736
+2016-09-21 16:05:09,623 [Thread-16:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 304 0
+2016-09-21 16:05:09,648 [Thread-17:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/ad300x100.jpg
+2016-09-21 16:05:09,682 [Thread-18:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/01.jpg
+2016-09-21 16:05:09,688 [Thread-19:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/02.jpg
+2016-09-21 16:05:09,688 [Thread-17:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/ad300x100.jpg HTTP/1.1" 404 2769
+2016-09-21 16:05:09,706 [Thread-21:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/06.jpg
+2016-09-21 16:05:09,733 [Thread-19:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/02.jpg HTTP/1.1" 404 2748
+2016-09-21 16:05:09,737 [Thread-18:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/01.jpg HTTP/1.1" 404 2748
+2016-09-21 16:05:09,743 [Thread-21:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/06.jpg HTTP/1.1" 404 2748
+2016-09-21 16:05:09,756 [Thread-20:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/03.jpg
+2016-09-21 16:05:09,758 [Thread-22:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/04.jpg
+2016-09-21 16:05:09,761 [Thread-22:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/04.jpg HTTP/1.1" 404 2748
+2016-09-21 16:05:09,762 [Thread-20:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/03.jpg HTTP/1.1" 404 2748
+2016-09-21 16:07:56,252 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /article/?id=2 HTTP/1.1" 200 9763
+2016-09-21 16:07:56,287 [Thread-12:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-21 16:07:56,289 [Thread-11:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-21 16:07:56,308 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-21 16:07:56,311 [Thread-10:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-21 16:07:56,342 [Thread-9:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:07:56,344 [Thread-8:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 16:07:56,374 [Thread-15:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/js/nav.js
+2016-09-21 16:07:56,376 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:07:56,377 [Thread-15:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/js/nav.js HTTP/1.1" 404 2736
+2016-09-21 16:07:56,392 [Thread-16:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 304 0
+2016-09-21 16:07:56,427 [Thread-18:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/01.jpg
+2016-09-21 16:07:56,443 [Thread-17:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/ad300x100.jpg
+2016-09-21 16:07:56,459 [Thread-20:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/03.jpg
+2016-09-21 16:07:56,461 [Thread-19:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/02.jpg
+2016-09-21 16:07:56,469 [Thread-18:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/01.jpg HTTP/1.1" 404 2748
+2016-09-21 16:07:56,488 [Thread-20:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/03.jpg HTTP/1.1" 404 2748
+2016-09-21 16:07:56,499 [Thread-17:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/ad300x100.jpg HTTP/1.1" 404 2769
+2016-09-21 16:07:56,524 [Thread-22:123145344368640] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/04.jpg
+2016-09-21 16:07:56,524 [Thread-19:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/02.jpg HTTP/1.1" 404 2748
+2016-09-21 16:07:56,532 [Thread-21:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/06.jpg
+2016-09-21 16:07:56,535 [Thread-21:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/06.jpg HTTP/1.1" 404 2748
+2016-09-21 16:07:56,535 [Thread-22:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/04.jpg HTTP/1.1" 404 2748
+2016-09-21 16:08:50,859 [Thread-24:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:08:50,861 [Thread-23:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 16:08:50,879 [Thread-25:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:14:07,825 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/ HTTP/1.1" 200 8243
+2016-09-21 16:14:10,137 [Thread-8:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/comment/ HTTP/1.1" 200 4162
+2016-09-21 16:14:10,177 [Thread-9:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 16:14:16,563 [Thread-10:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/comment/1/change/ HTTP/1.1" 200 7671
+2016-09-21 16:14:16,595 [Thread-11:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 16:14:21,970 [Thread-13:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "POST /admin/blog/comment/1/change/ HTTP/1.1" 302 0
+2016-09-21 16:14:22,090 [Thread-14:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/blog/comment/ HTTP/1.1" 200 4338
+2016-09-21 16:14:22,121 [Thread-15:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+2016-09-21 16:21:53,965 [Thread-7:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /article/?id=2 HTTP/1.1" 200 9761
+2016-09-21 16:21:54,045 [Thread-9:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/base.css HTTP/1.1" 304 0
+2016-09-21 16:21:54,048 [Thread-12:123145335955456] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+2016-09-21 16:21:54,049 [Thread-13:123145340162048] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/js/sliders.js HTTP/1.1" 304 0
+2016-09-21 16:21:54,059 [Thread-10:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/css/index.css HTTP/1.1" 304 0
+2016-09-21 16:21:54,076 [Thread-11:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/jquery.js HTTP/1.1" 404 1658
+2016-09-21 16:21:54,083 [Thread-14:123145344368640] [django.server:131] [basehttp:log_message] [WARNING] - "GET /static/js/up/js.js HTTP/1.1" 404 1646
+2016-09-21 16:21:54,112 [Thread-15:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/js/nav.js
+2016-09-21 16:21:54,117 [Thread-15:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/js/nav.js HTTP/1.1" 404 2736
+2016-09-21 16:21:54,164 [Thread-16:123145323335680] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/logo.png HTTP/1.1" 304 0
+2016-09-21 16:21:54,234 [Thread-17:123145327542272] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/ad300x100.jpg
+2016-09-21 16:21:54,240 [Thread-18:123145331748864] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/01.jpg
+2016-09-21 16:21:54,255 [Thread-22:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ico_06_1.jpg HTTP/1.1" 304 0
+2016-09-21 16:21:54,262 [Thread-17:123145327542272] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/ad300x100.jpg HTTP/1.1" 404 2769
+2016-09-21 16:21:54,263 [Thread-18:123145331748864] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/01.jpg HTTP/1.1" 404 2748
+2016-09-21 16:21:54,267 [Thread-21:123145323335680] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/06.jpg
+2016-09-21 16:21:54,290 [Thread-19:123145335955456] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/02.jpg
+2016-09-21 16:21:54,290 [Thread-23:123145348575232] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ico_05_1.jpg HTTP/1.1" 304 0
+2016-09-21 16:21:54,299 [Thread-25:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/icons.png HTTP/1.1" 304 0
+2016-09-21 16:21:54,300 [Thread-24:123145344368640] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ico_07_1.jpg HTTP/1.1" 304 0
+2016-09-21 16:21:54,304 [Thread-21:123145323335680] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/06.jpg HTTP/1.1" 404 2748
+2016-09-21 16:21:54,316 [Thread-26:123145331748864] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ico_04_1.jpg HTTP/1.1" 304 0
+2016-09-21 16:21:54,322 [Thread-19:123145335955456] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/02.jpg HTTP/1.1" 404 2748
+2016-09-21 16:21:54,324 [Thread-20:123145340162048] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/03.jpg
+2016-09-21 16:21:54,325 [Thread-27:123145352781824] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/ph2.png HTTP/1.1" 304 0
+2016-09-21 16:21:54,378 [Thread-30:123145356988416] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/datepng.png HTTP/1.1" 304 0
+2016-09-21 16:21:54,388 [Thread-29:123145327542272] [django.server:131] [basehttp:log_message] [INFO] - "GET /static/images/lanmbq.png HTTP/1.1" 304 0
+2016-09-21 16:21:54,388 [Thread-20:123145340162048] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/03.jpg HTTP/1.1" 404 2748
+2016-09-21 16:21:54,392 [Thread-28:123145348575232] [django.request:152] [base:get_response] [WARNING] - Not Found: /article/images/04.jpg
+2016-09-21 16:21:54,397 [Thread-28:123145348575232] [django.server:131] [basehttp:log_message] [WARNING] - "GET /article/images/04.jpg HTTP/1.1" 404 2748
