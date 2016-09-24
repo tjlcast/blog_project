@@ -4,7 +4,10 @@ from django.shortcuts import render
 from django.conf import settings # 读取setting信息
 from blog.models import Catagory # 读取分类信息
 from blog.models import Article # 读取文章信息
+from blog.models import Comment
+from blog.forms import CommentForm
 from django.core.paginator import Paginator, InvalidPage, EmptyPage, PageNotAnInteger
+from django.contrib.auth import authenticate
 import logging
 
 logger = logging.getLogger('blog.views')
@@ -17,16 +20,8 @@ def global_setting(request):
 
 
 # Create your views here.
+
 def index(request):
-    # 注意传入参数和render的参数
-    try:
-        file = open('sss.txt', 'r')
-    except Exception as e:
-        logger.error(e)
-    return render(request, 'index.html', locals())
-
-
-def index2(request):
     try:
         category_list = Catagory.objects.all()
 
@@ -45,7 +40,7 @@ def index2(request):
     except Exception as e:
         logger.error(e)
     # return render(request, 'new_index.html', {'category_list' : category_list})
-    return render(request, 'new_index.html', locals())
+    return render(request, 'index.html', locals())
 
 
 def index_bak(request):
@@ -54,11 +49,50 @@ def index_bak(request):
 
 # 文章详情
 def article(request):
+
+    if request.method == 'POST':  # 如果表单被提交
+        form = CommentForm(request.POST)  # 获取Post表单数据
+        print form
+
+
     id = request.GET.get('id', None)
     try:
         article = Article.objects.get(pk=id)
-        comment_list = article.comment_set.all()
+
+        comment_form = CommentForm({
+            'author' : request.user.username,
+            'email' : request.user.email,
+            'url' : request.user.url,
+            'article' : id
+        } if request.user.is_authenticated() else {'article' : 'id'})
+
+        # comment_list = article.comment_set.all()
+        comments = Comment.objects.filter(article=article).order_by('id')
+        comment_list = []
+        for comment in comments:
+            for item in comment_list:
+                    if not hasattr(item, 'children_comment'): # 临时为一个评论对象增加一个子评论集合
+                        setattr(item, 'children_comment', [])
+                    if comment.pid == item:
+                        item.children_comment.append(comment)
+                        break
+            if comment.pid is None:
+                comment_list.append(comment)
     except Exception as e:
         return render(request, 'failure.html', {'reason' : '没有找到对应的文章'})
-    return render(request, 'article.html', locals())
+    return render(request, 'article_old.html', locals())
+
+
+def login(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        login(request, user)
+        # Redirect to a success page.
+        pass
+    else:
+        # Return an 'invalid login' error message.
+        pass
+    render(request, 'login.html', locals())
 

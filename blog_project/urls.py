@@ -18,7 +18,6 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog.views import index
-from blog.views import index2
 from blog.views import article
 from blog.views import index_bak
 from django.conf import settings
@@ -29,7 +28,6 @@ from blog.upload import upload_image
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
-    url(r'index2', index2, name='index2'),
     url(r'indexbak', index_bak, name='indexbak'),
     # 注意参数以及别名
     url(r"^uploads/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT}),
