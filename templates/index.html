@@ -1,77 +1,18 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-
-{% block content %}
-<div class="content">
-	 <div class="container">
-		 <div class="content-grids">
-			 <div class="col-md-8 content-main">
-
-			 	{% for article in article_list %}
-				 <div class="content-grid">
-					 <div class="content-grid-head">
-						 <h3>POST OF THE DAY</h3>
-						 <h4>{{ article.date_publish | date:'Y-m-d' }} Posted by : <a href="#">{{ article.user.username }}</a></h4>
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="content-grid-info">
-						 <h3><a href="single.html">{{ article.title }}</a></h3>
-						 <p>{{ article.desc }}</p>
-						 <!-- <img src="{% static 'images/c1.jpg' %}" alt=""/> -->
-						 <a class="bttn" href="single.html">MORE</a>
-					</div>
-				 </div>
-				 {% endfor %}
-
-                 {% for article in article_list %}
-				 <div class="content-grid-sec">
-					 <div class="content-sec-info">
-							 <h3><a href="single.html">{{ article.title }}</a></h3>
-							 <h4>{{ article.date_publish | date:'Y-m-d' }} Posted by : <a href="#">{{ article.user.username }}</a></h4>
-							 <p> {{ article.desc }}</p>
-<!-- {#							 <img src="images/c2.jpg" alt=""/>#} -->
-							 <a class="bttn" href="single.html">MORE</a>
-					 </div>
-				 </div>
-				 <hr />
-                 {% endfor %}
-
-				 <div class="content-grid-sec">
-					 <div class="content-sec-info">
-							 <h3><a href="single.html">VESTIBULUM COMMODO FELIS</a></h3>
-							 <h4>Jul 23, 2014, Posted by : <a href="#">Admin</a></h4>
-							 <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.</p>
-							 <!-- <img src="{% static 'images/c3.jpg' %}" alt=""/> -->
-							 <a class="bttn" href="single.html">MORE</a>
-					 </div>
-				 </div>				 
-				 {% include 'pages.html' %}
-
-			 </div>
-			 
-			 <div class="col-md-4 content-main-right">
-				 <div class="search">
-						 <h3>SEARCH HERE</h3>
-						<form>
-							<input type="text" value="" onfocus="this.value=''" onblur="this.value=''">
-							<input type="submit" value="">
-						</form>
-				 </div>
-				 <div class="categories">
-					 <h3>CATEGORIES</h3>
-					 <li class="active"><a href="#">Donec quis dui at dolor tempor</a></li>
-					 <li><a href="#">Vestibulum commodo felis quis tort</a></li>
-					 <li><a href="#">Fusce pellentesque suscipit</a></li>
-				 </div>
-				 <div class="archives">
-					 <h3>ARCHIVES</h3>
-					 <li class="active"><a href="#">July 2014</a></li>
-					 <li><a href="#">June 2014</a></li>
-					 <li><a href="#">May 2014</a></li>
-				 </div>
-			 </div>
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-</div>
+{% block left_content %}
+    {% include 'ad.html' %}
+    <div class="topnews">
+      <h2>最新文章</h2>
+      {% for article in article_list %}
+      <div class="blogs">
+        <ul>
+          <h3><a href="{% url 'article' %}?id={{ article.id }}">{{ article.title }}</a></h3>
+          <p>{{ article.desc }}</p>
+          <p class="autor"><span class="lm f_l">{% for tag in article.tag.all %}<a href="/">{{ tag.name }}</a>&nbsp;</span>{% endfor %}<span class="dtime f_l">{{ article.date_publish | date:'Y-m-d' }}</span><span class="viewnum f_r">浏览（<a href="/">{{ article.click_count }}</a>）</span><span class="pingl f_r">评论（<a href="/">{{ article.comment_set.all.count }}</a>）</span></p>
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+    {% include 'pagination.html' %}
 {% endblock %}

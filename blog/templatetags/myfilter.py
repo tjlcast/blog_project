@@ -9,4 +9,11 @@ def month_to_upper(key):
     return ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十'][key.month - 1]
 
 
+def list_empty(l):
+    if len(l) == 0:
+        return True
+    return False
+
+
 register.filter('month_to_upper', month_to_upper)
+register.filter('list_empty', list_empty)
